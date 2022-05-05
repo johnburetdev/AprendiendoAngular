@@ -1,0 +1,38 @@
+<div class="content-wrap">
+    <div class="">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <button [routerLink]="['/heroes']" class="btn btn-outline-success btn-block"> <--- </button>
+                    <div class="container mt-2">
+                        <img *ngIf="heroe.casa == 'DC'" class="img-casa" src="../../../assets/img/DC.png" alt="">
+                        <img *ngIf="heroe.casa == 'Marvel'" class="img-casa" src="../../../assets/img/marvel.png" alt="">
+                    </div>
+                    <h1 class="mt-10 mb-30 pb-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="10" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
+                        {{ heroe.nombre | uppercase }}
+                    </h1>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+    </div>>
+    <div class="mt-0">
+        <div class="container text-center">
+            <img [src]="heroe.img" alt="heroe" style="height: 280px;">
+        </div>
+    </div>
+    <div class="pt-160 pb-130 mt-2">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="mb-n8 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="10" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
+                        <small class="text-muted"> 
+                {{heroe.casa}} - ({{ heroe.aparicion | date:'y' }}) 
+             </small>
+                    </p>
+                    <p class="mb-n8 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="10" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">{{ heroe.bio }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
